@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO DO LIST</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-box">
+        <div class="time">
+          <h1 id="clock">11:45:12</h1>
+          <h4 id="date">Tuesday, 17 July 2024</h4>
+        </div>
+        <div class="task-container">
+          <h1>TO DO LIST</h1>
+          <div class="box">
+            <input id="taskInput" type="text" placeholder="Enter a task" />
+            <button id="createBtn" onclick="createSave()">Add task</button>
+            <ul class="tasks"></ul>
+            <div id="noTasks">
+                <img width="60" src="add.png" alt="Add task image">
+                <p>Add tasks</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+            <p>&copy;2024 TrackTask. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+:root {
+    --bg-clr: #F0F0F0;
+    --text-clr: #001F3F;
+    --grey-clr-200: #505050;
+    --grey-clr-100: #808080;
+
+    --accent-clr: #FF6B6B;
+    --primary-clr: #dddddd;
+    --secondary-clr: #ffd700;
+
+    --ff: 'Fredoka One', sans-serif;
+}
+
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+* {
+    min-width: 0;
+}
+
+body {
+    color: var(--text-clr);
+    font-family: var(--ff);
+    padding: 2rem 0;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem 0;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    min-height: 100vh;
+    max-width: 768px;
+    margin: 0 auto;
+
+    display: grid;
+    padding: 0 .875rem;
+}
+
+.main-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+
+    text-align: center;
+}
+
+.time {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#clock {
+    color: var(--secondary-clr);
+}
+
+#date {
+    color: var(--grey-clr-100);
+}
+
+.box {
+    height: 100%;
+}
+
+.task-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+
+    text-align: center;
+    background-color: var(--bg-clr);
+    border-radius: 8px;
+    padding: 1rem;
+    width: 100%;
+
+    min-height: 568px;
+}
+
+#taskInput {
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-family: var(--ff);
+    color: var(--grey-clr-200);
+}
+
+#taskInput:focus {
+    outline-color: var(--secondary-clr);
+}
+
+#createBtn {
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background-color: var(--secondary-clr);
+    font-family: var(--ff);
+}
+
+.tasks {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-clr);
+    border-radius: 6px;
+    padding: 0.875rem 1rem;
+}
+
+#noTasks {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+   height: 100%;
+}
+
+
+.text {
+    text-align: start;
+    display: flex;
+    word-wrap: break-word;
+
+    font-size: 0.9rem;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+
+    width: 40px;
+}
+
+.editButton {
+    background-color: transparent;
+    border: none;
+    color: var(--secondary-clr);
+}
+
+.deleteButton {
+    background-color: transparent;
+    border: none;
+    color: var(--accent-clr);
+}
+
+.footer {
+    text-align: center;
+    color: var(--grey-clr-100);
+}
+
+@media only screen and (max-width: 500px) {
+    .task {
+        width: 100%;
+    }
+
+    .text {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 356px) {
+    .box {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
